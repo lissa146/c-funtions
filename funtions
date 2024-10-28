@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+
+//function declaration
+void docking_countdown();
+void truck_weight_check(int load_weight);
+void school_zone_signal(string signal_color);
+void get_ticket_price(int visitor_age);
+void verify_username();
+int main() {
+
+	docking_countdown(); //function call!
+	truck_weight_check(1300);
+	school_zone_signal("green");
+	get_ticket_price(16);
+	verify_username();
+}
+
+
+//function definition
+void docking_countdown() {
+
+	for (int j = 20; j >0; j -= 3)
+		cout << j << " ";
+	cout << "docking complete!" << endl;
+}
+
+void truck_weight_check(int load_weight) {
+	if (load_weight > 1200) {
+		cout << "over weight" << endl;
+
+	}
+	else {
+		cout << "within limit" << endl;
+	}
+}
+
+void school_zone_signal(string signal_color) {
+	if (signal_color == "red") {
+		cout << "stop" << endl;
+	}
+	else if (signal_color == "yellow") {
+		cout << "slow down" << endl;
+
+	}
+	else {
+		cout << "go" << endl;
+	}
+ }
+
+void get_ticket_price(int visitor_age) {
+	if (visitor_age < 10) {
+		cout << "museum price is 8$" << endl;
+	}
+	else if (visitor_age < 60) {
+		cout << "for ticket price for aduits and teen is 18$" << endl;
+
+	}
+	else {
+		cout << "for senoirs 60 and older it is 12$" << endl;
+	}
+}
+
+void verify_username() {
+	string username;
+	while (username != "codemaster123") {
+		cout << "what is your username" << endl;
+			cin >> username;
+
+
+			cout << "access greanted!" << endl;
+
+
+	}
+}
